@@ -21,6 +21,12 @@ const sliderDots = document.getElementById("sliderDots");
 const contactForm = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
 const yearEl = document.getElementById("year");
+const eventDropdown = document.getElementById("eventDropdown");
+const eventDropdownToggle = document.getElementById("eventDropdownToggle");
+const eventDropdownMenu = document.getElementById("eventDropdownMenu");
+const eventTypesInput = document.getElementById("eventTypesInput");
+const selectedEvents = document.getElementById("selectedEvents");
+const eventDropdownText = document.getElementById("eventDropdownText");
 
 let lightboxIndex = 0;
 let testimonialIndex = 0;
@@ -28,16 +34,29 @@ let testimonialTimer;
 
 /* Mobile menu */
 if (menuToggle && navLinks) {
+  const closeMobileMenu = () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    body.classList.remove("menu-open");
+  };
+
   menuToggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    body.classList.toggle("menu-open", isOpen);
   });
 
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
+      closeMobileMenu();
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!navLinks.classList.contains("open")) return;
+    const clickedInsideNav = navLinks.contains(event.target);
+    const clickedToggle = menuToggle.contains(event.target);
+    if (!clickedInsideNav && !clickedToggle) closeMobileMenu();
   });
 }
 
@@ -118,6 +137,11 @@ lightbox?.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navLinks?.classList.contains("open")) {
+    navLinks.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    body.classList.remove("menu-open");
+  }
   if (!lightbox || !lightbox.classList.contains("open")) return;
   if (event.key === "Escape") {
     closeLightboxModal();
@@ -197,6 +221,77 @@ contactForm?.addEventListener("submit", (event) => {
 
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
+}
+
+/* Contact: professional multi-event dropdown */
+if (
+  eventDropdown &&
+  eventDropdownToggle &&
+  eventDropdownMenu &&
+  eventTypesInput &&
+  selectedEvents &&
+  eventDropdownText
+) {
+  const checkboxes = Array.from(
+    eventDropdownMenu.querySelectorAll('input[type="checkbox"]')
+  );
+
+  const renderSelectedEvents = () => {
+    const selected = checkboxes
+      .filter((cb) => cb.checked)
+      .map((cb) => cb.value);
+
+    eventTypesInput.value = selected.join(", ");
+    if (!selected.length) {
+      eventDropdownText.textContent = "Select event type(s)";
+      eventDropdownText.classList.add("is-placeholder");
+    } else if (selected.length <= 2) {
+      eventDropdownText.textContent = selected.join(", ");
+      eventDropdownText.classList.remove("is-placeholder");
+    } else {
+      eventDropdownText.textContent = `${selected.length} events selected`;
+      eventDropdownText.classList.remove("is-placeholder");
+    }
+
+    selectedEvents.innerHTML = selected
+      .map((item) => `<span class="chip">${item}</span>`)
+      .join("");
+  };
+
+  eventDropdownToggle.addEventListener("click", () => {
+    const isOpen = eventDropdown.classList.toggle("open");
+    eventDropdownToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  checkboxes.forEach((cb) => {
+    cb.addEventListener("change", renderSelectedEvents);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!eventDropdown.classList.contains("open")) return;
+    if (!eventDropdown.contains(event.target)) {
+      eventDropdown.classList.remove("open");
+      eventDropdownToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    if (!eventDropdown.classList.contains("open")) return;
+    eventDropdown.classList.remove("open");
+    eventDropdownToggle.setAttribute("aria-expanded", "false");
+  });
+
+  contactForm?.addEventListener("reset", () => {
+    checkboxes.forEach((cb) => {
+      cb.checked = false;
+    });
+    renderSelectedEvents();
+    eventDropdown.classList.remove("open");
+    eventDropdownToggle.setAttribute("aria-expanded", "false");
+  });
+
+  renderSelectedEvents();
 }
 
 /* Fade-in on scroll via IntersectionObserver */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | OM Photographer</title>
-    <meta name="description" content="Contact OM for wedding, portrait, commercial, and drone photography in Hyderabad." />
+    <meta name="description" content="Contact OM for wedding, portrait, commercial, and drone photography in Ratnagiri." />
     <meta property="og:title" content="Contact | OM Photographer" />
     <meta property="og:description" content="Book a photography session in Ratnagiri, Maharashtra." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80" />
@@ -65,6 +65,25 @@
 
             <label for="phone">Phone</label>
             <input id="phone" name="phone" type="tel" />
+
+            <label for="eventTypesInput">Event Type(s)</label>
+            <div class="multi-dropdown" id="eventDropdown">
+              <button type="button" id="eventDropdownToggle" class="multi-dropdown-toggle" aria-expanded="false" aria-controls="eventDropdownMenu">
+                <span id="eventDropdownText" class="multi-dropdown-text is-placeholder">Select event type(s)</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div id="eventDropdownMenu" class="multi-dropdown-menu" role="listbox" aria-label="Event types">
+                <label><input type="checkbox" value="Wedding" /><span>Wedding</span></label>
+                <label><input type="checkbox" value="Engagement" /><span>Engagement</span></label>
+                <label><input type="checkbox" value="Portrait Session" /><span>Portrait Session</span></label>
+                <label><input type="checkbox" value="Commercial/Product" /><span>Commercial/Product</span></label>
+                <label><input type="checkbox" value="Pre-Wedding" /><span>Pre-Wedding</span></label>
+                <label><input type="checkbox" value="Family" /><span>Family</span></label>
+              </div>
+              <div id="selectedEvents" class="selected-events"></div>
+            </div>
+            <input id="eventTypesInput" name="eventTypes" type="text" class="visually-hidden-input" required readonly />
+            <small class="input-help">Select one or multiple events from the dropdown.</small>
 
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
