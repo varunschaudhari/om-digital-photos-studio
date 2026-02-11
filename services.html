@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services & Packages | OM Photographer</title>
+    <meta name="description" content="Photography services and packages for weddings, portraits, commercial, and drone shoots." />
+    <meta property="og:title" content="Services & Packages | OM Photographer" />
+    <meta property="og:description" content="Explore service categories and pricing tiers tailored for your story." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="logo" href="index.html">OM<span>Visuals</span></a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-small services-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Services</p>
+          <h1>Curated Photography Services</h1>
+          <p>Tailored experiences for celebrations, portraits, and premium commercial storytelling.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="services-grid">
+            <article class="card">
+              <i class="fa-solid fa-heart"></i>
+              <h3>Wedding Photography</h3>
+              <p>Complete narrative coverage from rituals to reception with artistic direction.</p>
+            </article>
+            <article class="card">
+              <i class="fa-solid fa-user-group"></i>
+              <h3>Portrait Sessions</h3>
+              <p>Personal, family, and couple sessions with refined lighting and styling.</p>
+            </article>
+            <article class="card">
+              <i class="fa-solid fa-box-open"></i>
+              <h3>Product & Commercial</h3>
+              <p>Conversion-focused visuals for brands, catalogs, and social content.</p>
+            </article>
+            <article class="card">
+              <i class="fa-solid fa-helicopter"></i>
+              <h3>Aerial Drone Visuals</h3>
+              <p>Dynamic aerial perspectives for venues, campaigns, and destination shoots.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Packages</p>
+            <h2>Choose Your Experience</h2>
+          </div>
+          <div class="pricing-grid">
+            <article class="price-card">
+              <h3>Basic</h3>
+              <p class="price">₹25,000 <span>starting</span></p>
+              <ul>
+                <li>2 Hours Coverage</li>
+                <li>1 Photographer</li>
+                <li>60 Edited Photos</li>
+                <li>Digital Delivery</li>
+              </ul>
+              <a class="btn btn-secondary" href="contact.html">Inquire</a>
+            </article>
+            <article class="price-card featured">
+              <span class="badge">Popular</span>
+              <h3>Premium</h3>
+              <p class="price">₹65,000 <span>starting</span></p>
+              <ul>
+                <li>6 Hours Coverage</li>
+                <li>2 Photographers</li>
+                <li>250 Edited Photos</li>
+                <li>Highlight Reel</li>
+              </ul>
+              <a class="btn btn-primary" href="contact.html">Inquire</a>
+            </article>
+            <article class="price-card">
+              <h3>Luxury</h3>
+              <p class="price">₹1,25,000 <span>starting</span></p>
+              <ul>
+                <li>Full-Day Coverage</li>
+                <li>Photo + Video Team</li>
+                <li>500+ Edited Photos</li>
+                <li>Album + Drone Add-on</li>
+              </ul>
+              <a class="btn btn-secondary" href="contact.html">Inquire</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> OM Visuals. All rights reserved.</p>
+        <div class="footer-actions">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#top" class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

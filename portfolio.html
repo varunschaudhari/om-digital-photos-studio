@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | OM Photographer</title>
+    <meta name="description" content="Explore wedding, portrait, commercial, and drone photography by OM." />
+    <meta property="og:title" content="Portfolio | OM Photographer" />
+    <meta property="og:description" content="Image-centric portfolio with curated high-end visual storytelling." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1400&q=80" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="logo" href="index.html">OM<span>Visuals</span></a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-small portfolio-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Selected Work</h1>
+          <p>A visual archive of weddings, portraits, commercial campaigns, and aerial stories.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="filter-wrap" role="group" aria-label="Portfolio categories">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Weddings</button>
+            <button class="filter-btn" data-filter="portrait">Portraits</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+          </div>
+
+          <!-- Performance hint: use srcset/sizes with local AVIF/WEBP assets in production -->
+          <div class="gallery-grid gallery-portfolio" id="galleryGrid">
+            <figure class="gallery-item tall wedding">
+              <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Wedding couple portrait" loading="lazy" width="1000" height="1300" data-title="Golden Vows" data-meta="Jan 2026" />
+              <figcaption><span>Weddings</span><h3>Golden Vows</h3><small>Jan 2026</small></figcaption>
+            </figure>
+            <figure class="gallery-item portrait">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Portrait session close-up" loading="lazy" width="1000" height="1300" data-title="Soft Editorial" data-meta="Dec 2025" />
+              <figcaption><span>Portraits</span><h3>Soft Editorial</h3><small>Dec 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item wide commercial">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80" srcset="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1024&q=80 1024w, https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(max-width: 699px) 100vw, (max-width: 979px) 66vw, 50vw" alt="Fashion campaign visual" loading="lazy" width="1400" height="900" data-title="Fashion Campaign" data-meta="Nov 2025" />
+              <figcaption><span>Commercial</span><h3>Fashion Campaign</h3><small>Nov 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item wedding">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Wedding ritual frame" loading="lazy" width="1000" height="1300" data-title="Sacred Rituals" data-meta="Jan 2026" />
+              <figcaption><span>Weddings</span><h3>Sacred Rituals</h3><small>Jan 2026</small></figcaption>
+            </figure>
+            <figure class="gallery-item commercial">
+              <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Commercial city campaign visual" loading="lazy" width="1000" height="1300" data-title="City Brand Visual" data-meta="Oct 2025" />
+              <figcaption><span>Commercial</span><h3>City Brand Visual</h3><small>Oct 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item portrait">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Male portrait in natural light" loading="lazy" width="1000" height="1300" data-title="Quiet Confidence" data-meta="Nov 2025" />
+              <figcaption><span>Portraits</span><h3>Quiet Confidence</h3><small>Nov 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item commercial">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Luxury watch product photo" loading="lazy" width="1000" height="1300" data-title="Luxury Timepiece" data-meta="Aug 2025" />
+              <figcaption><span>Commercial</span><h3>Luxury Timepiece</h3><small>Aug 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item wide wedding">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=80" srcset="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1024&q=80 1024w, https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80 1600w" sizes="(max-width: 699px) 100vw, (max-width: 979px) 66vw, 50vw" alt="Couple session near lake" loading="lazy" width="1400" height="900" data-title="Lakeside Promise" data-meta="Dec 2025" />
+              <figcaption><span>Weddings</span><h3>Lakeside Promise</h3><small>Dec 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item portrait">
+              <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Urban portrait photography" loading="lazy" width="1000" height="1300" data-title="City Mood" data-meta="Jul 2025" />
+              <figcaption><span>Portraits</span><h3>City Mood</h3><small>Jul 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item commercial">
+              <img src="https://images.unsplash.com/photo-1508614999368-9260051292e5?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1508614999368-9260051292e5?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1508614999368-9260051292e5?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1508614999368-9260051292e5?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Automotive commercial road shot" loading="lazy" width="1000" height="1300" data-title="Motion Campaign" data-meta="Jun 2025" />
+              <figcaption><span>Commercial</span><h3>Motion Campaign</h3><small>Jun 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item wedding">
+              <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Bridal portrait details" loading="lazy" width="1000" height="1300" data-title="Bridal Elegance" data-meta="Jan 2026" />
+              <figcaption><span>Weddings</span><h3>Bridal Elegance</h3><small>Jan 2026</small></figcaption>
+            </figure>
+            <figure class="gallery-item commercial">
+              <img src="https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1521540216272-a50305cd4421?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Product campaign frame" loading="lazy" width="1000" height="1300" data-title="Product Moodscape" data-meta="Sep 2025" />
+              <figcaption><span>Commercial</span><h3>Product Moodscape</h3><small>Sep 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item portrait">
+              <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Editorial portrait dramatic lighting" loading="lazy" width="1000" height="1300" data-title="Light & Shadow" data-meta="May 2025" />
+              <figcaption><span>Portraits</span><h3>Light & Shadow</h3><small>May 2025</small></figcaption>
+            </figure>
+            <figure class="gallery-item commercial">
+              <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1000&q=80" srcset="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=480&q=80 480w, https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=768&q=80 768w, https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80 1200w" sizes="(max-width: 699px) 50vw, (max-width: 979px) 33vw, 25vw" alt="Luxury travel campaign scene" loading="lazy" width="1000" height="1300" data-title="Coastal Campaign" data-meta="Apr 2025" />
+              <figcaption><span>Commercial</span><h3>Coastal Campaign</h3><small>Apr 2025</small></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Portfolio image preview">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+      <button id="lightboxPrev" class="lightbox-arrow prev" aria-label="Previous image"><i class="fa-solid fa-arrow-left"></i></button>
+      <img id="lightboxImage" src="" alt="Expanded portfolio image" />
+      <button id="lightboxNext" class="lightbox-arrow next" aria-label="Next image"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle"></h3>
+        <span id="lightboxMeta"></span>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> OM Visuals. All rights reserved.</p>
+        <div class="footer-actions">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#top" class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

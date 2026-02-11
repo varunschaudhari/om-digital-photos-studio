@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | OM Photographer</title>
+    <meta name="description" content="Contact OM for wedding, portrait, commercial, and drone photography in Hyderabad." />
+    <meta property="og:title" content="Contact | OM Photographer" />
+    <meta property="og:description" content="Book a photography session in Ratnagiri, Maharashtra." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a class="logo" href="index.html">OM<span>Visuals</span></a>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero hero-small contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Contact</p>
+          <h1>Let's Plan Your Session</h1>
+          <p>Share your vision and get a tailored photography proposal.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-centered">
+          <article class="contact-intro">
+            <h2>Book a Session</h2>
+            <p>Based in Ratnagiri, Maharashtra. Available for destination travel upon request.</p>
+            <p class="address-line"><i class="fa-solid fa-location-dot"></i> Ratnagiri, Maharashtra, India</p>
+            <div class="social-links center-socials">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </article>
+
+          <form id="contactForm" class="contact-form centered-form" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <h2>Studio Location</h2>
+          <p>Map embed placeholder (replace with Google Maps embed iframe in production).</p>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p>Ratnagiri, Maharashtra</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> OM Visuals. All rights reserved.</p>
+        <div class="footer-actions">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#top" class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
