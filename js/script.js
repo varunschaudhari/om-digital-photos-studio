@@ -212,10 +212,37 @@ contactForm?.addEventListener("submit", (event) => {
     }
     return;
   }
+
+  const formData = new FormData(contactForm);
+  const name = String(formData.get("name") || "").trim();
+  const email = String(formData.get("email") || "").trim();
+  const phone = String(formData.get("phone") || "").trim();
+  const eventTypes = String(formData.get("eventTypes") || "").trim();
+  const message = String(formData.get("message") || "").trim();
+
+  const subject = `New Booking Inquiry - ${name || "OM Photo Studio Website"}`;
+  const bodyLines = [
+    "Hello OM Photo Studio,",
+    "",
+    "I would like to book a session. Details:",
+    `Name: ${name || "-"}`,
+    `Email: ${email || "-"}`,
+    `Phone: ${phone || "-"}`,
+    `Event Type(s): ${eventTypes || "-"}`,
+    "",
+    "Message:",
+    message || "-",
+  ];
+  const mailtoUrl = `mailto:omkardclicks@gmail.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
   if (formNote) {
-    formNote.textContent = "Thank you. Your inquiry is ready to send.";
+    formNote.textContent =
+      "Opening your email app with a pre-filled inquiry to omkardclicks@gmail.com...";
     formNote.style.color = "#62b36b";
   }
+  window.location.href = mailtoUrl;
   contactForm.reset();
 });
 
